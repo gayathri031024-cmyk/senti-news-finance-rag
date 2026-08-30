@@ -1,0 +1,29 @@
+# Secrets — never commit real .env files, only .env.example
+.env
+backend/.env
+frontend/.env
+*.env.local
+
+# Python
+backend/venv/
+backend/.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Node / frontend
+frontend/node_modules/
+frontend/dist/
+node_modules/
+
+# Uploaded documents (user data, not source)
+backend/storage/uploads/*
+!backend/storage/uploads/.gitkeep
+
+# Editor / OS
+.DS_Store
+.vscode/
+.idea/
+
+# Postgres data if run locally outside Docker
+*.log

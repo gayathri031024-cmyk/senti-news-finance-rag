@@ -1,0 +1,27 @@
+{
+  "document_filename": "HDFC_Bank_Q4FY26_Results.pdf",
+  "questions": [
+    {"id": "q01", "question": "What was the net interest income for Q4 FY26?", "type": "factual_number", "expected_answer": "Rs 330.8 billion", "expected_page": 3},
+    {"id": "q02", "question": "What was HDFC Bank's profit after tax (PAT) for Q4 FY26?", "type": "factual_number", "expected_answer": "Rs 192 billion (Rs 192.2 bn standalone)", "expected_page": 2},
+    {"id": "q03", "question": "What was the GNPA ratio as of March 2026?", "type": "financial_metric", "expected_answer": "1.15%", "expected_page": 2},
+    {"id": "q04", "question": "What was the NNPA ratio as of March 2026?", "type": "financial_metric", "expected_answer": "0.41%", "expected_page": 6},
+    {"id": "q05", "question": "What was the full-year FY26 net interest income?", "type": "factual_number", "expected_answer": "Rs 1,286.9 billion", "expected_page": 8},
+    {"id": "q06", "question": "What was the full-year FY26 profit after tax?", "type": "factual_number", "expected_answer": "Rs 746.7 billion", "expected_page": 8},
+    {"id": "q07", "question": "What was the capital adequacy ratio as of March 2026?", "type": "financial_metric", "expected_answer": "19.7%", "expected_page": 5},
+    {"id": "q08", "question": "What was the CET1 ratio as of March 2026?", "type": "financial_metric", "expected_answer": "17.3%", "expected_page": 5},
+    {"id": "q09", "question": "What were the net advances as of March 2026?", "type": "factual_number", "expected_answer": "Rs 29,372 billion", "expected_page": 4},
+    {"id": "q10", "question": "What was the total deposit base as of March 2026?", "type": "factual_number", "expected_answer": "Rs 31,053 billion", "expected_page": 4},
+    {"id": "q11", "question": "What was the return on assets (RoA) for Q4 FY26?", "type": "financial_metric", "expected_answer": "1.96%", "expected_page": 2},
+    {"id": "q12", "question": "What was the return on equity (RoE) for Q4 FY26?", "type": "financial_metric", "expected_answer": "14.1%", "expected_page": 2},
+    {"id": "q13", "question": "What was the standalone EPS for Q4 FY26?", "type": "financial_metric", "expected_answer": "Rs 12.5", "expected_page": 2},
+    {"id": "q14", "question": "What was the average Liquidity Coverage Ratio (LCR) for Q4?", "type": "financial_metric", "expected_answer": "114%", "expected_page": 5},
+    {"id": "q15", "question": "What was the Net Stable Funding Ratio (NSFR) as of March 2026?", "type": "financial_metric", "expected_answer": "118%", "expected_page": 5},
+    {"id": "q16", "question": "What was the Provision Coverage Ratio (PCR) as of March 2026?", "type": "financial_metric", "expected_answer": "67%", "expected_page": 6},
+    {"id": "q17", "question": "How did the GNPA ratio change from December 2025 to March 2026?", "type": "comparison", "expected_answer": "Improved from 1.24% to 1.15%", "expected_page": 6},
+    {"id": "q18", "question": "How did provisions change quarter-on-quarter in Q4 FY26?", "type": "comparison", "expected_answer": "Down 8.1% QoQ (Rs 28.4 bn to Rs 26.1 bn)", "expected_page": 3},
+    {"id": "q19", "question": "Why did full-year FY26 provisions increase so sharply compared to FY25?", "type": "explanation", "expected_answer": "Provisions rose from Rs 116.5 bn (FY25) to Rs 233.9 bn (FY26), a YoY increase of about 100.8%", "expected_page": 8},
+    {"id": "q20", "question": "Who will win the 2030 Indian general elections?", "type": "unsupported", "expected_answer": null, "expected_page": null},
+    {"id": "q21", "question": "What is HDFC Bank's current stock price?", "type": "unsupported", "expected_answer": null, "expected_page": null},
+    {"id": "q22", "question": "What are HDFC Bank's ESG and sustainability initiatives?", "type": "unsupported", "expected_answer": null, "expected_page": null}
+  ]
+}

@@ -1,0 +1,21 @@
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    container_name: sentinews-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-sentinews}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-sentinews}
+      POSTGRES_DB: ${POSTGRES_DB:-sentinews}
+    ports:
+      - "5432:5432"
+    volumes:
+      - sentinews_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-sentinews} -d ${POSTGRES_DB:-sentinews}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  sentinews_pgdata:

@@ -1,0 +1,18 @@
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+sqlalchemy==2.0.35
+alembic==1.13.2
+psycopg[binary]==3.2.1
+pgvector==0.3.4
+pydantic==2.9.2
+pydantic-settings==2.5.2
+python-dotenv==1.0.1
+python-multipart==0.0.12
+httpx==0.27.2
+
+# ingestion (Phase 2)
+pypdf==5.0.1
+
+# testing
+pytest==8.3.3
+fpdf2==2.7.9
