@@ -1,4 +1,4 @@
-# SentiNews — Finance RAG (Phase 6: Evaluation)
+# SentiNews — Finance RAG 
 
 ## Purpose
 
