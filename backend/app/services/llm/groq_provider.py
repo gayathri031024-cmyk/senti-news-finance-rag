@@ -17,6 +17,9 @@ class GroqLLMProvider(LLMProvider):
         self.base_url = "https://api.groq.com/openai/v1/chat/completions"
 
     def generate(self, system_prompt: str, user_prompt: str) -> str:
+        if not self.api_key:
+            raise LLMProviderError("LLM_API_KEY is not configured.")
+
         try:
             response = httpx.post(
                 self.base_url,
@@ -47,7 +50,13 @@ class GroqLLMProvider(LLMProvider):
                 )
 
             data = response.json()
-            return data["choices"][0]["message"]["content"]
+
+            try:
+                return data["choices"][0]["message"]["content"]
+            except (KeyError, IndexError, TypeError) as exc:
+                raise LLMProviderError(
+                    f"Unexpected response from Groq: {data}"
+                ) from exc
 
         except httpx.HTTPError as exc:
             raise LLMProviderError(
