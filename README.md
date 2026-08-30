@@ -1,10 +1,70 @@
-# SentiNews — Finance RAG
+# SentiNews — Finance Research Assistant
 
-## Purpose
+SentiNews is a finance-focused RAG (Retrieval-Augmented Generation) application that lets users upload financial documents and ask questions grounded in the uploaded content.
 
-SentiNews is a prototype demonstrating the architecture for a finance research assistant: a system that will eventually let a user upload financial documents (filings, market news, reports) and ask questions answered with citations back to the source text.
+The system extracts and cleans PDF text, creates page-scoped chunks, indexes them using both semantic and keyword search, retrieves relevant evidence, and generates answers with citations pointing back to the source document.
 
-This repository is not a production system. It's a focused, technically credible demo of the underlying architecture, built in phases so each layer can be verified before the next is added.
+It is designed as a technically focused prototype demonstrating document ingestion, hybrid retrieval, grounded generation, citation traceability, and RAG evaluation. This repository is not a production system — it's built in phases so each layer can be verified before the next is added.
+
+## What It Does
+
+- Upload financial PDF documents
+- Extract text page-by-page
+- Clean and chunk financial content
+- Preserve page-level source attribution
+- Generate embeddings for semantic retrieval
+- Perform PostgreSQL full-text keyword search
+- Combine semantic and keyword retrieval using hybrid ranking
+- Build grounded context from retrieved chunks
+- Generate natural-language answers using a configurable LLM
+- Return citations tied to actually retrieved document chunks
+- Evaluate retrieval recall and citation traceability
+- Provide a simple research interface for uploading documents and asking questions
+
+## Architecture
+
+```text
+                    Financial PDF
+                         │
+                         ▼
+                 PDF Validation
+                         │
+                         ▼
+              Page-by-Page Extraction
+                         │
+                         ▼
+                     Cleaning
+                         │
+                         ▼
+             Sentence-Aware Chunking
+                         │
+                         ▼
+                  PostgreSQL
+                 ┌───────┴────────┐
+                 │                │
+                 ▼                ▼
+            Embeddings         Full-Text
+             pgvector           Search
+                 │                │
+                 └───────┬────────┘
+                         ▼
+                  Hybrid Retrieval
+                         │
+                         ▼
+                  Ranked Chunks
+                         │
+                         ▼
+                  Context Builder
+                         │
+                         ▼
+                    LLM Provider
+                         │
+                         ▼
+               Grounded Answer
+                         │
+                         ▼
+                     Citations
+```
 
 ## Phases
 
