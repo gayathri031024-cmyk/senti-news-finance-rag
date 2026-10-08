@@ -577,9 +577,3 @@ Try retrieval with a few different financial questions — e.g. "What is the GNP
 - The HNSW (embedding) and GIN (content_tsv) indexes are declared directly on the SQLAlchemy model (`DocumentChunk.__table_args__`) so the ORM and the migrations stay in sync — `alembic check` reports no pending schema drift.
 - The test suite (78 tests) exercises the application through mocked/unit-level boundaries; it validates code logic but not real Postgres behavior (generated columns, indexes). The `RUN_DB_INTEGRATION_TESTS=1` suites cover that gap when a real database is available.
 
-## What's Next
-
-- Add integration tests (upload → ingest → embed → retrieve) against a live Postgres+pgvector instance in CI, since the default suite only exercises mocked/unit-level boundaries.
-- Re-run the evaluation with `EMBEDDING_PROVIDER=openai` and a live Groq key to get a meaningful unsupported-question measurement and real end-to-end answer-quality numbers.
-- Build a dedicated retrieval frontend view (currently API-only for raw retrieval) and consider a PDF viewer with highlight-on-click.
-- Reranking, multi-turn chat, and authentication remain unimplemented and are candidates for future work.
